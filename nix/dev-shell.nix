@@ -1,20 +1,15 @@
 {
   mkShell,
-  pkgs-swift,
   pre-commit-check,
   # rustPlatform,
+  swift,
+  swiftpm,
+  swiftpm2nix,
+  swiftPackages,
   ...
 }:
 
 let
-
-  inherit (pkgs-swift)
-    swift
-    swiftpm
-    swiftpm2nix
-    swiftPackages
-    ;
-
   inherit (swiftPackages) stdenv;
 in
 # inherit (rustPlatform) cargo rustc;

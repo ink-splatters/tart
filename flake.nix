@@ -2,9 +2,6 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixpkgs-unstable";
 
-    # pinned to version containing binary-cached swift and swiftpm
-    nixpkgs-swift.url = "github:NixOS/nixpkgs/b69de56fac8c2b6f8fd27f2eca01dcda8e0a4221";
-
     systems.url = "github:nix-systems/default";
     flake-utils.inputs.systems.follows = "systems";
 
@@ -22,12 +19,12 @@
   };
 
   nixConfig = {
-    extra-substituters = [
-      "https://aarch64-darwin.cachix.org" # pre-built swift and swiftpm
-    ];
-    extra-trusted-public-keys = [
-      "aarch64-darwin.cachix.org-1:mEz8A1jcJveehs/ZbZUEjXZ65Aukk9bg2kmb0zL9XDA="
-    ];
+    # extra-substituters = [
+    #   "https://aarch64-darwin.cachix.org"
+    # ];
+    # extra-trusted-public-keys = [
+    #   "aarch64-darwin.cachix.org-1:mEz8A1jcJveehs/ZbZUEjXZ65Aukk9bg2kmb0zL9XDA="
+    # ];
     sandbox = "relaxed";
   };
 
@@ -36,7 +33,6 @@
       fenix,
       flake-utils,
       nixpkgs,
-      nixpkgs-swift,
       git-hooks,
       ...
     }:
@@ -44,10 +40,6 @@
       system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        pkgs-swift = import nixpkgs-swift {
-          inherit system;
-          config.allowUnfree = true;
-        };
 
         inherit (pkgs)
           callPackage
@@ -67,7 +59,7 @@
         };
 
         devShells = {
-          default = callPackage ./nix/dev-shell.nix { inherit pre-commit-check pkgs-swift; }; # rustPlatform; };
+          default = callPackage ./nix/dev-shell.nix { inherit pre-commit-check; }; # rustPlatform; };
           install-hooks = mkShell.override { stdenv = stdenvNoCC; } {
             inherit system;
             shellHook = ''
@@ -81,10 +73,9 @@
         formatter = nixfmt-rfc-style;
 
         packages.default = callPackage ./nix/tart {
-          inherit pkgs-swift rustPlatform src;
-          # enableSoftnet = true;
+          inherit rustPlatform src;
+          enableSoftnet = true;
         };
-
       }
     );
 }

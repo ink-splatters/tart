@@ -1,24 +1,20 @@
 {
   apple-sdk_12,
   callPackage,
-  # lib,
-  pkgs-swift,
-  src,
+  lib,
   rustPlatform,
-  # enableSoftnet ? false,
+  makeWrapper,
+  swift,
+  swiftpm,
+  swiftpm2nix,
+  swiftPackages,
+  src,
+  enableSoftnet ? false,
   ...
 }:
 
 let
-
   softnet = callPackage ./softnet.nix { inherit rustPlatform; };
-  inherit (pkgs-swift)
-    makeWrapper
-    swift
-    swiftpm
-    swiftpm2nix
-    swiftPackages
-    ;
 
   generated = swiftpm2nix.helpers ./generated;
 in
@@ -31,8 +27,7 @@ swiftPackages.stdenv.mkDerivation {
 
   buildInputs = [
     apple-sdk_12
-    softnet
-  ];
+  ] ++ lib.optional enableSoftnet softnet;
 
   nativeBuildInputs = [
     makeWrapper
