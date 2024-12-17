@@ -6,7 +6,7 @@
     flake-utils.inputs.systems.follows = "systems";
 
     git-hooks = {
-      url = "github:ink-splatters/git-hooks.nix";
+      url = "github:cachix/git-hooks.nix";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         nixpkgs-stable.follows = "nixpkgs";
@@ -19,12 +19,6 @@
   };
 
   nixConfig = {
-    # extra-substituters = [
-    #   "https://aarch64-darwin.cachix.org"
-    # ];
-    # extra-trusted-public-keys = [
-    #   "aarch64-darwin.cachix.org-1:mEz8A1jcJveehs/ZbZUEjXZ65Aukk9bg2kmb0zL9XDA="
-    # ];
     sandbox = "relaxed";
   };
 
