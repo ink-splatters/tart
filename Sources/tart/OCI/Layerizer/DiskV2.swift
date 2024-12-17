@@ -1,7 +1,7 @@
 import Foundation
 import Compression
 import System
-import Retry
+// import Retry
 
 class DiskV2: Disk {
   private static let bufferSizeBytes = 4 * 1024 * 1024
@@ -44,12 +44,12 @@ class DiskV2: Disk {
           let compressedData = try (data as NSData).compressed(using: .lz4) as Data
           let compressedDataDigest = Digest.hash(compressedData)
 
-          try await retry(maxAttempts: 5, backoff: .exponentialWithFullJitter(baseDelay: .seconds(5), maxDelay: .seconds(60))) {
+          //try await retry(maxAttempts: 5, backoff: .exponentialWithFullJitter(baseDelay: .seconds(5), maxDelay: .seconds(60))) {
             if try await !registry.blobExists(compressedDataDigest) {
               _ = try await registry.pushBlob(fromData: compressedData, chunkSizeMb: chunkSizeMb, digest: compressedDataDigest)
             }
-          } recoverFromFailure: { error in
-            if error is URLError {
+          //}
+            else if error is URLError {
               print("Error: \(error.localizedDescription)")
               print("Attempting to re-try...")
 

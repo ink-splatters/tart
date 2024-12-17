@@ -19,7 +19,7 @@ rustPlatform.buildRustPackage rec {
   version = "0.12.0";
 
   src = fetchFromGitHub {
-    owner = "cirrusla[bs";
+    owner = "cirruslabs";
     repo = "${pname}";
     rev = "${version}";
     hash = "sha256-ekpqg9TsSKfk8reU0iIArKoEb/uDZl8HkwzBBU7zRWw=";
@@ -36,7 +36,7 @@ rustPlatform.buildRustPackage rec {
   '';
   installPhase = ''
     		mkdir -p $out/bin
-        install -Dm4755 target/${target-triplet}/release/${pname} -t $out/bin
+        install -D target/${target-triplet}/release/${pname} -t $out/bin
   '';
 
   buildInputs = [

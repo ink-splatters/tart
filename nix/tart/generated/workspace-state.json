@@ -1,0 +1,246 @@
+{
+  "object": {
+    "artifacts": [],
+    "dependencies": [
+      {
+        "basedOn": null,
+        "packageRef": {
+          "identity": "antlr4",
+          "kind": "remoteSourceControl",
+          "location": "https://github.com/antlr/antlr4",
+          "name": "Antlr4"
+        },
+        "state": {
+          "checkoutState": {
+            "revision": "cc82115a4e7f53d71d9d905caa2c2dfa4da58899",
+            "version": "4.13.2"
+          },
+          "name": "sourceControlCheckout"
+        },
+        "subpath": "antlr4"
+      },
+      {
+        "basedOn": null,
+        "packageRef": {
+          "identity": "dynamic",
+          "kind": "remoteSourceControl",
+          "location": "https://github.com/mhdhejazi/Dynamic",
+          "name": "Dynamic"
+        },
+        "state": {
+          "checkoutState": {
+            "branch": "master",
+            "revision": "772883073d044bc754d401cabb6574624eb3778f"
+          },
+          "name": "sourceControlCheckout"
+        },
+        "subpath": "Dynamic"
+      },
+      {
+        "basedOn": null,
+        "packageRef": {
+          "identity": "semaphore",
+          "kind": "remoteSourceControl",
+          "location": "https://github.com/groue/Semaphore",
+          "name": "Semaphore"
+        },
+        "state": {
+          "checkoutState": {
+            "revision": "f1c4a0acabeb591068dea6cffdd39660b86dec28",
+            "version": "0.0.8"
+          },
+          "name": "sourceControlCheckout"
+        },
+        "subpath": "Semaphore"
+      },
+      {
+        "basedOn": null,
+        "packageRef": {
+          "identity": "sentry-cocoa",
+          "kind": "remoteSourceControl",
+          "location": "https://github.com/getsentry/sentry-cocoa",
+          "name": "Sentry"
+        },
+        "state": {
+          "checkoutState": {
+            "revision": "56bfb7e723c76614be4c0861ee820ccbaed14c6d",
+            "version": "8.41.0"
+          },
+          "name": "sourceControlCheckout"
+        },
+        "subpath": "sentry-cocoa"
+      },
+      {
+        "basedOn": null,
+        "packageRef": {
+          "identity": "swift-algorithms",
+          "kind": "remoteSourceControl",
+          "location": "https://github.com/apple/swift-algorithms",
+          "name": "swift-algorithms"
+        },
+        "state": {
+          "checkoutState": {
+            "revision": "f6919dfc309e7f1b56224378b11e28bab5bccc42",
+            "version": "1.2.0"
+          },
+          "name": "sourceControlCheckout"
+        },
+        "subpath": "swift-algorithms"
+      },
+      {
+        "basedOn": null,
+        "packageRef": {
+          "identity": "swift-argument-parser",
+          "kind": "remoteSourceControl",
+          "location": "https://github.com/apple/swift-argument-parser",
+          "name": "swift-argument-parser"
+        },
+        "state": {
+          "checkoutState": {
+            "revision": "41982a3656a71c768319979febd796c6fd111d5c",
+            "version": "1.5.0"
+          },
+          "name": "sourceControlCheckout"
+        },
+        "subpath": "swift-argument-parser"
+      },
+      {
+        "basedOn": null,
+        "packageRef": {
+          "identity": "swift-atomics",
+          "kind": "remoteSourceControl",
+          "location": "https://github.com/apple/swift-atomics.git",
+          "name": "swift-atomics"
+        },
+        "state": {
+          "checkoutState": {
+            "revision": "cd142fd2f64be2100422d658e7411e39489da985",
+            "version": "1.2.0"
+          },
+          "name": "sourceControlCheckout"
+        },
+        "subpath": "swift-atomics"
+      },
+      {
+        "basedOn": null,
+        "packageRef": {
+          "identity": "swift-numerics",
+          "kind": "remoteSourceControl",
+          "location": "https://github.com/apple/swift-numerics.git",
+          "name": "swift-numerics"
+        },
+        "state": {
+          "checkoutState": {
+            "revision": "0a5bc04095a675662cf24757cc0640aa2204253b",
+            "version": "1.0.2"
+          },
+          "name": "sourceControlCheckout"
+        },
+        "subpath": "swift-numerics"
+      },
+      {
+        "basedOn": null,
+        "packageRef": {
+          "identity": "swift-sysctl",
+          "kind": "remoteSourceControl",
+          "location": "https://github.com/sersoft-gmbh/swift-sysctl.git",
+          "name": "swift-sysctl"
+        },
+        "state": {
+          "checkoutState": {
+            "revision": "71fd64ee84819bb19fbecfb36d5a4503726b6fb7",
+            "version": "1.6.0"
+          },
+          "name": "sourceControlCheckout"
+        },
+        "subpath": "swift-sysctl"
+      },
+      {
+        "basedOn": null,
+        "packageRef": {
+          "identity": "swift-xattr",
+          "kind": "remoteSourceControl",
+          "location": "https://github.com/jozefizso/swift-xattr",
+          "name": "XAttr"
+        },
+        "state": {
+          "checkoutState": {
+            "revision": "1cd1e6bc9aecdcce31c66e2d2d5561ecd7ead83a",
+            "version": "3.0.1"
+          },
+          "name": "sourceControlCheckout"
+        },
+        "subpath": "swift-xattr"
+      },
+      {
+        "basedOn": null,
+        "packageRef": {
+          "identity": "swiftdate",
+          "kind": "remoteSourceControl",
+          "location": "https://github.com/malcommac/SwiftDate",
+          "name": "SwiftDate"
+        },
+        "state": {
+          "checkoutState": {
+            "revision": "5d943224c3bb173e6ecf27295611615eba90c80e",
+            "version": "7.0.0"
+          },
+          "name": "sourceControlCheckout"
+        },
+        "subpath": "SwiftDate"
+      },
+      {
+        "basedOn": null,
+        "packageRef": {
+          "identity": "swiftformat",
+          "kind": "remoteSourceControl",
+          "location": "https://github.com/nicklockwood/SwiftFormat",
+          "name": "SwiftFormat"
+        },
+        "state": {
+          "checkoutState": {
+            "revision": "2d5a2b6bde636c1feae2c852ab9a50f221e98c66",
+            "version": "0.55.3"
+          },
+          "name": "sourceControlCheckout"
+        },
+        "subpath": "SwiftFormat"
+      },
+      {
+        "basedOn": null,
+        "packageRef": {
+          "identity": "swiftradix",
+          "kind": "remoteSourceControl",
+          "location": "https://github.com/orchetect/SwiftRadix",
+          "name": "SwiftRadix"
+        },
+        "state": {
+          "checkoutState": {
+            "revision": "20cefdba8304e0ccf2effc9965cdfa48b09ef9b4",
+            "version": "1.3.2"
+          },
+          "name": "sourceControlCheckout"
+        },
+        "subpath": "SwiftRadix"
+      },
+      {
+        "basedOn": null,
+        "packageRef": {
+          "identity": "texttable",
+          "kind": "remoteSourceControl",
+          "location": "https://github.com/cfilipov/TextTable",
+          "name": "TextTable"
+        },
+        "state": {
+          "checkoutState": {
+            "branch": "master",
+            "revision": "e03289289155b4e7aa565e32862f9cb42140596a"
+          },
+          "name": "sourceControlCheckout"
+        },
+        "subpath": "TextTable"
+      }
+    ]
+  },
+  "version": 6
+}

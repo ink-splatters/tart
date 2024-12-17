@@ -28,7 +28,7 @@
     extra-trusted-public-keys = [
       "aarch64-darwin.cachix.org-1:mEz8A1jcJveehs/ZbZUEjXZ65Aukk9bg2kmb0zL9XDA="
     ];
-    # sandbox = "relaxed";
+    sandbox = "relaxed";
   };
 
   outputs =
@@ -81,8 +81,8 @@
         formatter = nixfmt-rfc-style;
 
         packages.default = callPackage ./nix/tart {
-          inherit pkgs-swift src rustPlatform;
-          enableSoftnet = true;
+          inherit pkgs-swift rustPlatform src;
+          # enableSoftnet = true;
         };
 
       }

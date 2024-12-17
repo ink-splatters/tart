@@ -19,10 +19,9 @@ let package = Package(
     .package(url: "https://github.com/nicklockwood/SwiftFormat", from: "0.53.6"),
     .package(url: "https://github.com/getsentry/sentry-cocoa", from: "8.36.0"),
     .package(url: "https://github.com/cfilipov/TextTable", branch: "master"),
-    .package(url: "https://github.com/sersoft-gmbh/swift-sysctl.git", from: "1.8.0"),
+    .package(url: "https://github.com/sersoft-gmbh/swift-sysctl.git", from: "1.6.0"),
     .package(url: "https://github.com/orchetect/SwiftRadix", from: "1.3.1"),
     .package(url: "https://github.com/groue/Semaphore", from: "0.0.8"),
-    .package(url: "https://github.com/fumoboy007/swift-retry", from: "0.2.3"),
     .package(url: "https://github.com/jozefizso/swift-xattr", from: "3.0.0"),
   ],
   targets: [
@@ -38,7 +37,6 @@ let package = Package(
       .product(name: "Sysctl", package: "swift-sysctl"),
       .product(name: "SwiftRadix", package: "SwiftRadix"),
       .product(name: "Semaphore", package: "Semaphore"),
-      .product(name: "DMRetry", package: "swift-retry"),
       .product(name: "XAttr", package: "swift-xattr"),
     ], exclude: [
       "OCI/Reference/Makefile",
