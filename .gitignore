@@ -19,3 +19,5 @@ dist/
 
 # mkdocs-material
 site
+/.pre-commit-config.yaml
+/.direnv
